@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>movie search</title>
+</head>
+<body>
+    <div class="container">
+        <!-- logo -->
+        <div class="logo">
+            <img src="./cinema-camera_icon-icons.com_56102.png" alt=""> 
+            <h1>Movie<span>.com</span></h1>
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox-input">
+                <div class="checkbox-div"></div>
+            </label>
+        </div>
+            <!-- search elements -->
+        <div class="container-search">
+            <div class="search">
+                <div class="search-element">
+                    <span>Search your movie:</span>
+                    <input type="text" placeholder="Search movie title . . ." class="search-input" onkeyup ="findMovies()">
+                </div>
+                <div class="search-list" id="search-list">
+                    <!-- <div class="search-list-element">
+                         <div class="search-img">
+                            <img src="./top gun2.webp" alt="top gun"> 
+                        </div>
+                        <div class="search-info">
+                            <h3>Top Gun: Maverick</h3>
+                            <p>2022</p>
+                        </div>   -->
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <!-- results -->
+        <div class="result">
+            <div class="result-grid">
+                <!-- <div class="movie-title">
+                    <h3 class="movie-title">Top Gun: Maverick</h3>
+                </div>
+                <div class="movie-poster">
+                    <img src="./top gun2.webp" alt="">
+                </div>
+                <div class="movie-info">
+                    <ul class="movie-misc-info">
+                        <li class="year"><span class="li">Year:</span> 2022</li>
+                        <li class="ratings"><span class="li">Raitings:</span> PG-13</li>
+                        <li class="release-date"><span class="liэ">Release date:</span> 27 may</li>
+                    </ul>
+                    <p class="genre"><b>Genre:</b> Action, Drama</p>
+                    <p class="writer"><b>Writers:</b> Ehren Kruger, Eric Singer, Christopher McQuarrie, Jim Cash, Jack Epps Jr., Peter Craig, Justin Marks</p>
+                    <p class="actors"><b>Actors:</b> Tom Cruise, Miles Teller, Jennifer Connelly, Jonn Hamm</p>
+                    <p class="plot"><b>Plot:</b> Set 30 years after its predecessor, it follows Maverick's return to the United States Navy Strike Fighter Tactics Instructor program (also known as U.S. Navy-Fighter Weapons School - "TOPGUN"), where he must confront his past as he trains a group of younger pilots, among them the son of Maverick's deceased best friend Lieutenant Nick "Goose" Bradshaw, USN.</p>
+                    <p class="language"><b>Language:</b> English</p>
+                    <p class="awards"><b>Awards:</b> "N/A"</p>
+                    <div class="favourite-button-div">
+                        <button class="favourite-button" onclick="addToFavorites('${movie.imdbID}')">Add to chosen</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="a">
+                <a href="./favourite.html"><span>Избранное</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- java script -->
+    <script src="./index.js"></script>
+</body>
+</html>

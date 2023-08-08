@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1B1918;
+    font-size: calc(1.1vw + 10px);
+    color: #DCD5D0;
+}
+h1{
+    color: #DCD5D0;
+    text-transform: uppercase;
+}
+h1 span{
+    color: #DF140E;
+}
+.logo {
+    display: flex;
+    background-color: black;
+    font-family: sans-serif;
+}
+.logo img{
+    width: calc(3.3vw + 15px);
+    height: calc(3.3vw + 15px);
+    filter: invert(100%) sepia(0%) saturate(7460%) hue-rotate(62deg) brightness(101%) contrast(93%);;
+}
+img{
+    width: 100%;
+    display: block;
+}
+
+.search-element{
+    flex-direction: column;
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+.search-element span{
+    text-align: center;
+    font-size: calc(2.2vw + 12px);
+}
+.search-element .search-input{
+    padding-left: calc(0.2vw + 10.3px);
+    box-shadow: none;
+    border: #1B1918;
+    margin: auto;
+    height: calc(1.7vw + 18.8px);
+    border-radius: 5px;
+    font-size: calc(0.9vw + 14.6px);
+    outline: none;
+    background-color: black;
+    color: #DCD5D0;
+    width: calc(13.3vw + 190px);
+}
+.movie-title{
+    text-align: center;
+    font-size: calc(3vw + 9px);
+    color: #DF140E;
+}
+.movie-poster{
+    margin-top: calc(0.6vw + 9px);
+}
+.movie-info{
+    padding-left: calc(0.6vw + 8px);
+    background-color: black;
+    margin-top: calc(0.6vw + 9px);
+}
+.ratings .li, .awards b{
+    background-color: #DF140E;
+    border-radius: 10px;
+}
+.search{
+    justify-content: center;
+    position: relative;
+    width: calc(13.3vw + 190px);
+}
+.container-search{
+    justify-content: center;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    margin: center;
+}
+.container-search h3{
+    align-self: center;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.search-list {
+    font-size: calc(1.1vw + 6px);
+    max-height: 600%;
+    margin: auto;
+    width: calc(13.3vw + 190px);
+    position: absolute;
+    left: 0;
+    overflow-y: scroll;
+    background-color: #1B1918 ;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    z-index: 10;
+}
+.search-list-element{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.search-list .search-info{
+    width: 40px;
+    margin-right: 1rem;
+
+}
+.search-img img{
+    width: calc(3.5vw + 55px);
+}
+.search-info h3{
+    margin-bottom: 11px;
+}
+.search-list::-webkit-scrollbar{
+    scrollbar-color: #DF140E;
+    width: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+.search-list::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.search-list::-webkit-scrollbar-thumb{
+    background-color: #DF140E;
+    outline: none;
+    border-radius: 8px;
+}
+.movie-poster img{
+    max-width: 300px;
+    margin: auto;
+}
+.language{
+    color: #DF140E;
+}
+.checkbox{
+    margin-top: calc(0.7vw + 5.5px);
+    margin-left: auto;
+    margin-right: calc(1.1vw + 6px) ;
+    --second-color: black;
+    --first-color: white;
+    --width: calc(4.4vw + 24px);
+    --height: calc(1.7vw + 9px);
+    --offset: calc(1vw - 0.8px);
+    --duration: 0.3s;
+}
+.checkbox-div{
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--width);
+    background-color: var(--first-color);
+    transition: var(--duration);
+}
+.checkbox-input{
+    display: none;
+}
+.checkbox-input:checked ~ .checkbox-div{
+    background-color: var(--second-color);
+}
+.checkbox-input:checked ~ .checkbox-div::before{
+    background-color: var(--first-color);
+    left: calc(var(--width) - var(--height) + var(--offset));
+}
+.checkbox-div::before{
+    content: '';
+    position: absolute;
+    top: var(--offset);
+    left: var(--offset);
+    width: calc(var(--height) - 2 * var(--offset));
+    height: calc(var(--height) - 2 * var(--offset));
+    background-color: var(--second-color);
+    border-radius: 50%;
+    transition: var(--duration);
+}
+.favourite-button{
+    margin-top: 5px;
+    border-bottom: none;
+    border: 3px solid #DF140E;
+    font-size: calc(1.1vw + 10px);
+    background-color: #1B1918;
+    color: #DCD5D0;
+    margin-left: auto;
+    
+}
+
+
+[data-theme="bright"] {
+    background-color: #DCD5D0;
+    color: #1B1918;
+}
+
+[data-theme="bright"] .search-list {
+    background-color: #DCD5D0;
+}
+
+[data-theme="bright"] .movie-info{
+    background-color: white;
+}
+a{
+    margin-top: 5px;
+    text-decoration: none;
+    border: white solid 1px;
+    color:#DCD5D0;
+    display: flex;
+    justify-content: center;
+    background-color: #DF140E;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+}
+[data-theme="bright"] .a a{
+    color: #1B1918;
+    border: #1B1918 solid 1px;
+}
+[data-theme="bright"] .favourite-button{
+    color: #1B1918;
+    background-color: #DCD5D0;
+}
